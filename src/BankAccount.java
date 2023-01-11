@@ -10,10 +10,12 @@ public class BankAccount {
         System.out.println("ваш счет пополнен , ваш настоящий счет" + getAmount());
     }
 
-    public void withDraw(double sum) throws LimitException {
+    public void withDraw(int sum) throws LimitException {
         if ((amount - sum) < 0) {
             throw new LimitException("у вас не достаточно средств" + getAmount(), getAmount());
         }
         amount -= sum;
     }
+
+
 }

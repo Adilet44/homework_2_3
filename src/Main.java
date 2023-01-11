@@ -9,8 +9,7 @@ public class Main {
             System.out.println("успешно выводены , ваш оставщий счет" + account.getAmount());
         }catch (LimitException le ) {
             System.out.println(le.getMessage());
-          account.withDraw(le.getRemainingAmount());
-            System.out.println("было снято вся сумма , текущий счет: " + account.getAmount());
+          System.out.println("было снято вся сумма , текущий счет: " + account.getAmount());
             chek=true;
         }
     }
